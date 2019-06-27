@@ -105,9 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4969111ec4a220b4cb9a2653dfc1ec73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RB: {fileID: 3170457109317834404, guid: d90c27e4c78030a488281b95da58e887, type: 3}
+  RB: {fileID: 7882492569758844206}
   BallCamera: {fileID: 0}
   PinScoretxt: {fileID: 0}
+  Mousesensitivity: 0
 --- !u!54 &7882492569758844206
 Rigidbody:
   m_ObjectHideFlags: 0

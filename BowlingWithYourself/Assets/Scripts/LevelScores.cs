@@ -38,17 +38,17 @@ public class LevelScores : MonoBehaviour
         {
             img_L1.sprite = Star0;
         }
-        if (L1Score <= 5)
+        if (L1Score >= 1)
         {
             img_L1.sprite = Star1;
         }
 
-        if (L1Score >= 9)
+        if (L1Score >= 6)
         {
             img_L1.sprite = Star2;
         }
 
-        if (L1Score == 10)
+        if (L1Score >= 10)
         {
             img_L1.sprite = Star3;
         }
@@ -56,10 +56,44 @@ public class LevelScores : MonoBehaviour
     }
     public void Level2()
     {
+        if (L2Score == 0)
+        {
+            img_L2.sprite = Star0;
+        }
+        if (L2Score >= 1)
+        {
+            img_L2.sprite = Star1;
+        }
 
+        if (L2Score >= 6)
+        {
+            img_L2.sprite = Star2;
+        }
+
+        if (L2Score >= 10)
+        {
+            img_L2.sprite = Star3;
+        }
     }
     public void Level3()
     {
+        if (L3Score == 0)
+        {
+            img_L3.sprite = Star0;
+        }
+        if (L3Score >= 1)
+        {
+            img_L3.sprite = Star1;
+        }
 
+        if (L3Score >= 6)
+        {
+            img_L3.sprite = Star2;
+        }
+
+        if (L3Score >= 10)
+        {
+            img_L3.sprite = Star3;
+        }
     }
 }
