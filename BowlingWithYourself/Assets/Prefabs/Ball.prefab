@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 872fcde4a6e32704bba86874f085d426, type: 2}
+  - {fileID: 2100000, guid: c3c46472bb4b22742a3a9581ba761a58, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,8 +91,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.09663196
-  m_Center: {x: 0.000000040978193, y: 0, z: 0}
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2088702755799307328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   BallCamera: {fileID: 0}
   PinScoretxt: {fileID: 0}
   Mousesensitivity: 0
+  powerLimit: 0
 --- !u!54 &7882492569758844206
 Rigidbody:
   m_ObjectHideFlags: 0
