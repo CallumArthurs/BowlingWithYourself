@@ -46,13 +46,13 @@ public class BallController : MonoBehaviour
         else
         {
 
-            BallCamera.transform.RotateAround(gameObject.transform.position, gameObject.transform.up, -Input.GetAxis("Mouse X"));
+            BallCamera.transform.RotateAround(gameObject.transform.position, Vector3.up, -Input.GetAxis("Mouse X"));
             //BallCamera.transform.RotateAround(gameObject.transform.position, gameObject.transform.right, Input.GetAxis("Mouse Y"));
 
             //offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X"), -Vector3.up) * offset;
             //offset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y"), -Vector3.forward) * offset;
 
-            Xoffset = Quaternion.AngleAxis(-Input.GetAxis("Mouse X") * Mousesensitivity, Vector3.up) * Xoffset;
+            Xoffset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * Mousesensitivity, Vector3.up) * Xoffset;
             Yoffset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y"), Vector3.right) * Yoffset;
 
             BallCamera.transform.LookAt(gameObject.transform);
