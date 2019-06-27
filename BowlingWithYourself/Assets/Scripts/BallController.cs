@@ -1,19 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BallController : MonoBehaviour
 {
-    public float power = 0;
+
     public Rigidbody RB;
     public GameObject BallCamera;
-    public float rotation = 0.0f;
+    public Text PinScoretxt;
+
+    private float power = 0;
+    private float rotation = 0.0f;
     private Vector3 offset;
+    private int pinsHit = 0;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
         offset = new Vector3(gameObject.transform.position.x - 3, gameObject.transform.position.y, gameObject.transform.position.z - 3);
+        ChangeScore(0);
     }
 
     void Update()
@@ -40,5 +47,11 @@ public class BallController : MonoBehaviour
             BallCamera.transform.LookAt(gameObject.transform);
         }
 
+    }
+
+    public void ChangeScore(int value)
+    {
+        pinsHit += value;
+        PinScoretxt.text = "Pins Hit: " + pinsHit.ToString();
     }
 }
