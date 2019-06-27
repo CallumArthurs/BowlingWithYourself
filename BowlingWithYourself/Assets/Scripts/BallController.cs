@@ -10,7 +10,7 @@ public class BallController : MonoBehaviour
     public GameObject BallCamera;
     public Text PinScoretxt;
     public float Mousesensitivity;
-
+    public float powerLimit = 0;
     private float power = 0;
     //private Vector3 offset;
 
@@ -40,6 +40,10 @@ public class BallController : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
+            if (power > powerLimit)
+            {
+                power = powerLimit;
+            }
             RB.AddForce(BallCamera.transform.forward * power, ForceMode.Impulse);
             power = 0;
         }
