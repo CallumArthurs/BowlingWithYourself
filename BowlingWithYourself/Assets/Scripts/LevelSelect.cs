@@ -21,13 +21,20 @@ public class LevelSelect : MonoBehaviour
             if (Time.timeScale == 1)
             {
                 PauseMenu.gameObject.SetActive(true);
+                CursorLock(false);
                 Time.timeScale = 0;
             }
             else
             {
                 PauseMenu.gameObject.SetActive(false);
+                CursorLock(true);
                 Time.timeScale = 1;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(1);
         }
     }
 
@@ -55,5 +62,17 @@ public class LevelSelect : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void CursorLock(bool Value)
+    {
+        if (Value)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
