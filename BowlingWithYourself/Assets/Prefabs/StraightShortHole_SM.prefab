@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4937088362412905145}
   - component: {fileID: 4937088362413707929}
   - component: {fileID: 4937088362414805081}
-  - component: {fileID: 750343337946549859}
+  - component: {fileID: 6672253651204649496}
   m_Layer: 0
   m_Name: StraightShortHole_SM
   m_TagString: Untagged
@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4937088362412609177}
-  m_Mesh: {fileID: 4300000, guid: 214445b05f565034ca909398b9f9bbeb, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 89cecd4a7ec52a649b41f25009e8370f, type: 3}
 --- !u!23 &4937088362414805081
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58,8 +58,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 214445b05f565034ca909398b9f9bbeb, type: 3}
-  - {fileID: 2100002, guid: 214445b05f565034ca909398b9f9bbeb, type: 3}
+  - {fileID: 2100000, guid: a7b2c39e9a1935840939e223eb435cba, type: 2}
+  - {fileID: 2100000, guid: a7b2c39e9a1935840939e223eb435cba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &750343337946549859
+--- !u!64 &6672253651204649496
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

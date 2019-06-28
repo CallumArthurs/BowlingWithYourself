@@ -16,7 +16,7 @@ public class LevelSelect : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (Time.timeScale == 1)
@@ -39,24 +39,28 @@ public class LevelSelect : MonoBehaviour
         }
     }
 
-    public static void LoadScene0()
+    public void LoadScene0()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
     public void LoadScene1()
     {
         levelNum = 0;
         SceneManager.LoadScene(1);
+        Time.timeScale = 1;
     }
     public void LoadScene2()
     {
         levelNum = 1;
         SceneManager.LoadScene(2);
+        Time.timeScale = 1;
     }
     public void LoadScene3()
     {
         levelNum = 2;
         SceneManager.LoadScene(3);
+        Time.timeScale = 1;
     }
     public void ResumeGame()
     {

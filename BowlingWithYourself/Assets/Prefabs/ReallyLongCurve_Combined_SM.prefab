@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1528397439620772041}
   - component: {fileID: 1528397439617347817}
   - component: {fileID: 1528397439618478633}
-  - component: {fileID: 671650879684838270}
+  - component: {fileID: 6755419121737613007}
   m_Layer: 0
   m_Name: Really_Long_Curve_Combined
   m_TagString: Untagged
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2724879ff152ac44b8c65642dabea721, type: 3}
+  - {fileID: 2100000, guid: a7e6f96c9af6d8a468cccfa5c5ccac1f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &671650879684838270
+--- !u!64 &6755419121737613007
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,7 +91,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: d6fa5c768ba72534cb44936fd7959393, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 2724879ff152ac44b8c65642dabea721, type: 3}
 --- !u!1 &1528397439620476139
 GameObject:
   m_ObjectHideFlags: 0

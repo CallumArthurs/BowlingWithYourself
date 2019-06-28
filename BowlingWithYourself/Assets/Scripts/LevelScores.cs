@@ -17,7 +17,7 @@ public class LevelScores : MonoBehaviour
     public Sprite Star3;
 
 
-    public static int[] Scores = { 0, 0, 0 };
+    public static int[] Scores = {0,0,0};
     public static int L1Score;
     public static int L2Score;
     public static int L3Score;
@@ -25,7 +25,7 @@ public class LevelScores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
