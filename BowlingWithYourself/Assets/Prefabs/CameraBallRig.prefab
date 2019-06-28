@@ -506,7 +506,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  power: 0
+  PowerMultipiler: 1
 --- !u!1 &1610046033914594625
 GameObject:
   m_ObjectHideFlags: 0
