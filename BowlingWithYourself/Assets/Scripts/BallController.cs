@@ -115,6 +115,7 @@ public class BallController : MonoBehaviour
     {
         LevelScores.Scores[LevelSelect.levelNum] = pinsHit;
         Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         LevelSelect.LoadScene0();
     }
 }
