@@ -16,7 +16,7 @@ public class BallController : MonoBehaviour
     public Gradient Gradient;
     public float minSpeed = 3.0f;
     public float DistFromBall;
-
+    public LineRenderer lineProjector;
     public float PowerMultipiler = 1;
     private float power = 0;
     //private Vector3 offset;
@@ -25,6 +25,7 @@ public class BallController : MonoBehaviour
     private Vector3 Yoffset;
     private float rotation;
     private Vector3 PrevPos;
+    private Vector3[] linePositions;
 
     private int pinsHit = 0;
     private bool HitBall;
@@ -39,6 +40,12 @@ public class BallController : MonoBehaviour
         slider.value = 0;
         ChangeScore(0);
         rotation = BallCamera.transform.localRotation.y;
+        linePositions = new Vector3[2];
+        for (int i = 0; i < 1; i++)
+        {
+            linePositions[i] = new Vector3(0, 0, 0);
+        }
+
         PrevPos = new Vector3(0, 0, 0);
     }
 
@@ -56,6 +63,7 @@ public class BallController : MonoBehaviour
         {
             RB.velocity = new Vector3(0, 0, 0);
             HitBall = false;
+            lineProjector.enabled = true;
         }
 
         //BallCamera.transform.position = gameObject.transform.position + offset;
@@ -78,10 +86,12 @@ public class BallController : MonoBehaviour
                 slider.value = 1 * ((power % powerLimit) / powerLimit);
             }
 
-            HitBall = true;
+            
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0) && RB.velocity.magnitude == 0.0f)
         {
+            HitBall = true;
+            lineProjector.enabled = false;
             if (power > powerLimit)
             {
                 power = powerLimit;
@@ -108,6 +118,10 @@ public class BallController : MonoBehaviour
 
             ///Xoffset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * Mousesensitivity, Vector3.up) * Xoffset;
             //Yoffset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y"), Vector3.right) * Yoffset;
+
+            linePositions[0] = gameObject.transform.position;
+            linePositions[1] = gameObject.transform.position + new Vector3(BallCamera.transform.forward.x * 2,0, BallCamera.transform.forward.z * 2);
+            lineProjector.SetPositions(linePositions);
 
             BallCamera.transform.LookAt(gameObject.transform);
         }

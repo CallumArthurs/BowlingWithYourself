@@ -6,11 +6,13 @@ public class PinScript : MonoBehaviour
 {
     private BallController ball;
     private bool knockedOver = false;
-    private void OnCollisionEnter(Collision collision)
+    public float MinAngle = 0.3f;
+
+    private void Awake()
     {
-        if (collision.gameObject.tag == "Ball")
+        if (ball == null)
         {
-            ball = collision.gameObject.GetComponent<BallController>();
+            GameObject.FindGameObjectWithTag("Ball");
         }
     }
 
@@ -18,7 +20,7 @@ public class PinScript : MonoBehaviour
     {
         if (ball != null)
         {
-            if ((Vector3.Dot(gameObject.transform.up, Vector3.up) < 0.3f && Vector3.Dot(gameObject.transform.up, Vector3.up) > -0.3f) && !knockedOver)
+            if ((Vector3.Dot(gameObject.transform.up, Vector3.up) < MinAngle && Vector3.Dot(gameObject.transform.up, Vector3.up) > -MinAngle) && !knockedOver)
             {
                 ball.ChangeScore(1);
                 knockedOver = true;
