@@ -451,8 +451,8 @@ Rigidbody:
   m_GameObject: {fileID: 1610046033746262084}
   serializedVersion: 2
   m_Mass: 5
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -506,7 +506,9 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  PowerMultipiler: 1
+  minSpeed: 3
+  DistFromBall: 3
+  PowerMultipiler: 5
 --- !u!1 &1610046033914594625
 GameObject:
   m_ObjectHideFlags: 0
