@@ -14,6 +14,7 @@ public class BallController : MonoBehaviour
     public float Mousesensitivity;
     public float powerLimit = 0;
     public Gradient Gradient;
+    public float minSpeed = 3.0f;
 
     public float PowerMultipiler = 1;
     private float power = 0;
@@ -22,8 +23,10 @@ public class BallController : MonoBehaviour
     private Vector3 Xoffset;
     private Vector3 Yoffset;
 
-    private int pinsHit = 0;
+    private Vector3 PrevPos;
 
+    private int pinsHit = 0;
+    private bool HitBall;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -34,14 +37,28 @@ public class BallController : MonoBehaviour
         PowerBar.color = Color.green;
         slider.value = 0;
         ChangeScore(0);
+
+        PrevPos = new Vector3(0, 0, 0);
     }
 
     void Update()
     {
+
+        if (transform.position.y < 0.0f)
+        {
+            transform.position = PrevPos;
+        }
+
+        if (RB.velocity.magnitude < minSpeed && HitBall)
+        {
+            RB.velocity = new Vector3(0, 0, 0);
+            HitBall = false;
+        }
+
         //BallCamera.transform.position = gameObject.transform.position + offset;
         BallCamera.transform.position = gameObject.transform.position + Xoffset + Yoffset;
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && RB.velocity.magnitude == 0.0f)
         {
             power += -Input.GetAxis("Mouse Y");
 
@@ -58,14 +75,17 @@ public class BallController : MonoBehaviour
                 slider.value = 1 * ((power % powerLimit) / powerLimit);
             }
 
-
+            HitBall = true;
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0))
+        else if (Input.GetKeyUp(KeyCode.Mouse0) && RB.velocity.magnitude == 0.0f)
         {
             if (power > powerLimit)
             {
                 power = powerLimit;
             }
+
+            PrevPos = transform.position;
+
             PowerBar.color = Color.green;
             slider.value = 0;
             RB.AddForce(BallCamera.transform.forward * (power * PowerMultipiler), ForceMode.Impulse);
