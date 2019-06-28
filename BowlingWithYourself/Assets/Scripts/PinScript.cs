@@ -18,7 +18,7 @@ public class PinScript : MonoBehaviour
     {
         if (ball != null)
         {
-            if (Vector3.Dot(gameObject.transform.up, Vector3.up) < 0.3f && Vector3.Dot(gameObject.transform.up, Vector3.up) > -0.3f && !knockedOver)
+            if ((Vector3.Dot(gameObject.transform.up, Vector3.up) < 0.3f && Vector3.Dot(gameObject.transform.up, Vector3.up) > -0.3f) && !knockedOver)
             {
                 ball.ChangeScore(1);
                 knockedOver = true;
