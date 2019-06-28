@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PinScript : MonoBehaviour
 {
-    private BallController ball;
+    private static BallController ball;
     private bool knockedOver = false;
     public float MinAngle = 0.3f;
 
