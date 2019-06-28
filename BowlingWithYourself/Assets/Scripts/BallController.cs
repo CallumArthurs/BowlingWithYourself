@@ -59,7 +59,7 @@ public class BallController : MonoBehaviour
             //HitBall = false;
         }
 
-        
+
 
         //BallCamera.transform.position = gameObject.transform.position + offset;
         //BallCamera.transform.position = gameObject.transform.position + (Xoffset + Yoffset);
@@ -98,12 +98,15 @@ public class BallController : MonoBehaviour
             RB.AddForce(new Vector3(BallCamera.transform.forward.x * 2, 0, BallCamera.transform.forward.z * 2) * (power * PowerMultipiler), ForceMode.Impulse);
             power = 0;
         }
+        else if (Time.timeScale != 0)
+        {
+            BallCamera.transform.Rotate(Vector3.right, Input.GetAxis("Mouse Y"));
+            BallCamera.transform.Rotate(Vector3.up, Input.GetAxis("Mouse X"));
+        }
 
         if (Time.timeScale != 0)
         {
 
-            BallCamera.transform.Rotate(Vector3.right,Input.GetAxis("Mouse Y"));
-            BallCamera.transform.Rotate(Vector3.up, Input.GetAxis("Mouse X"));
             BallCamera.transform.position = gameObject.transform.position - BallCamera.transform.forward * DistFromBall;
             ///BallCamera.transform.RotateAround(gameObject.transform.position, Vector3.up, Input.GetAxis("Mouse X"));
             //BallCamera.transform.RotateAround(gameObject.transform.position, Vector3.right, Input.GetAxis("Mouse Y"));
