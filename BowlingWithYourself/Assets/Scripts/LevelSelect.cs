@@ -42,21 +42,25 @@ public class LevelSelect : MonoBehaviour
     public void LoadScene0()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
     public void LoadScene1()
     {
         levelNum = 0;
-        SceneManager.LoadScene(1);        
+        SceneManager.LoadScene(1);
+        Time.timeScale = 1;
     }
     public void LoadScene2()
     {
         levelNum = 1;
         SceneManager.LoadScene(2);
+        Time.timeScale = 1;
     }
     public void LoadScene3()
     {
         levelNum = 2;
         SceneManager.LoadScene(3);
+        Time.timeScale = 1;
     }
     public void ResumeGame()
     {

@@ -615,6 +615,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e2daa315721b047bfdc6f2be9d5828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelImages:
+  - {fileID: 1169922201}
+  - {fileID: 1750790055}
+  - {fileID: 983352014}
   img_L1: {fileID: 1169922201}
   img_L2: {fileID: 1750790055}
   img_L3: {fileID: 983352014}
@@ -622,9 +626,6 @@ MonoBehaviour:
   Star1: {fileID: 21300000, guid: 0e9c546d96b04f14d85265746e12dbc5, type: 3}
   Star2: {fileID: 21300000, guid: 79c330da718c1994a814705304a860fc, type: 3}
   Star3: {fileID: 21300000, guid: 42a7eceba28c81f4ab22b8b6cf85fc21, type: 3}
-  L1Score: 0
-  L2Score: 0
-  L3Score: 0
 --- !u!4 &1161815636
 Transform:
   m_ObjectHideFlags: 0
@@ -1276,6 +1277,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1793472075}
+        m_MethodName: CursorLock
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
