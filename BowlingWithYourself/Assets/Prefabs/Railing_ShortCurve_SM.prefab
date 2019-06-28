@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 657333628347617084}
   - component: {fileID: 657333628348419868}
   - component: {fileID: 657333628349517276}
+  - component: {fileID: 990272574921709869}
   m_Layer: 0
   m_Name: Railing_Short_Curve_Outside
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &990272574921709869
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657333628347585308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: d2cefedd1037e9d46b06cae8fcc428e9, type: 3}
 --- !u!1 &657333628347585310
 GameObject:
   m_ObjectHideFlags: 0

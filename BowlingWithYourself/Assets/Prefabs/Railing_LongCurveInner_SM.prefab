@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7126745937827836837}
   - component: {fileID: 7126745937826542469}
   - component: {fileID: 7126745937825411397}
+  - component: {fileID: 3026288874850164453}
   m_Layer: 0
   m_Name: Railing_Long_Curve_Inside
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3026288874850164453
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126745937827344261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: e673d24b546182f449bac95d8dfdeda4, type: 3}
 --- !u!1 &7126745937827344263
 GameObject:
   m_ObjectHideFlags: 0

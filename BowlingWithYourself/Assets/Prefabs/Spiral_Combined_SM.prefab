@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7405383962743023721
+--- !u!1 &9203001523061006813
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7405383962742993993}
-  - component: {fileID: 7405383962742223977}
-  - component: {fileID: 7405383962741094057}
-  - component: {fileID: 6824820330896070885}
+  - component: {fileID: 9203001523060719101}
+  - component: {fileID: 9203001523059949021}
+  - component: {fileID: 9203001523058818845}
+  - component: {fileID: 7756949461497624060}
   m_Layer: 0
-  m_Name: Railing_Really_Long_Curve_Inside
+  m_Name: Spiral_Combined
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7405383962742993993
+--- !u!4 &9203001523060719101
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7405383962743023721}
+  m_GameObject: {fileID: 9203001523061006813}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7405383962742993995}
+  m_Father: {fileID: 9203001523060719103}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7405383962742223977
+--- !u!33 &9203001523059949021
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7405383962743023721}
-  m_Mesh: {fileID: 4300000, guid: b7cc974d7f2866b43b895e55fa53debd, type: 3}
---- !u!23 &7405383962741094057
+  m_GameObject: {fileID: 9203001523061006813}
+  m_Mesh: {fileID: 4300000, guid: 042529717fb767946862c5ce98702b45, type: 3}
+--- !u!23 &9203001523058818845
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7405383962743023721}
+  m_GameObject: {fileID: 9203001523061006813}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7cc974d7f2866b43b895e55fa53debd, type: 3}
+  - {fileID: 2100000, guid: 042529717fb767946862c5ce98702b45, type: 3}
+  - {fileID: 2100002, guid: 042529717fb767946862c5ce98702b45, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,21 +79,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6824820330896070885
+--- !u!64 &7756949461497624060
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7405383962743023721}
+  m_GameObject: {fileID: 9203001523061006813}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: b7cc974d7f2866b43b895e55fa53debd, type: 3}
---- !u!1 &7405383962743023723
+  m_Mesh: {fileID: 4300000, guid: 042529717fb767946862c5ce98702b45, type: 3}
+--- !u!1 &9203001523061006815
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,26 +101,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7405383962742993995}
+  - component: {fileID: 9203001523060719103}
   m_Layer: 0
-  m_Name: Railing_ReallyLongCurveInner_SM
+  m_Name: Spiral_Combined_SM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7405383962742993995
+--- !u!4 &9203001523060719103
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7405383962743023723}
+  m_GameObject: {fileID: 9203001523061006815}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7405383962742993993}
+  - {fileID: 9203001523060719101}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
