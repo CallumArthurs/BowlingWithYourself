@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 2447557329344084610}
   - component: {fileID: 2447557329340693154}
   - component: {fileID: 2447557329341659234}
+  - component: {fileID: 3643384299281837045}
   m_Layer: 0
   m_Name: Railing_Long_Curve_Outside
   m_TagString: Untagged
@@ -108,3 +109,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3643384299281837045
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2447557329343915682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 55b665798f286834daf078553fc394f8, type: 3}
