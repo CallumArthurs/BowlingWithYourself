@@ -56,7 +56,7 @@ public class BallController : MonoBehaviour
         {
             transform.position = PrevPos;
             RB.velocity = new Vector3(0, 0, 0);
-            HitBall = false;
+            //HitBall = false;
         }
 
         
@@ -64,7 +64,7 @@ public class BallController : MonoBehaviour
         //BallCamera.transform.position = gameObject.transform.position + offset;
         //BallCamera.transform.position = gameObject.transform.position + (Xoffset + Yoffset);
 
-        if (Input.GetKey(KeyCode.Mouse0) && RB.velocity.magnitude == 0.0f)
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             power += -Input.GetAxis("Mouse Y");
 
@@ -82,10 +82,10 @@ public class BallController : MonoBehaviour
             }
 
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) && RB.velocity.magnitude == 0.0f)
+        else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            HitBall = true;
-            lineProjector.enabled = false;
+            //HitBall = true;
+            //lineProjector.enabled = false;
             if (power > powerLimit)
             {
                 power = powerLimit;
@@ -98,7 +98,8 @@ public class BallController : MonoBehaviour
             RB.AddForce(new Vector3(BallCamera.transform.forward.x * 2, 0, BallCamera.transform.forward.z * 2) * (power * PowerMultipiler), ForceMode.Impulse);
             power = 0;
         }
-        else if (Time.timeScale != 0)
+
+        if (Time.timeScale != 0)
         {
 
             BallCamera.transform.Rotate(Vector3.right,Input.GetAxis("Mouse Y"));
@@ -117,12 +118,12 @@ public class BallController : MonoBehaviour
             linePositions[1] = gameObject.transform.position + new Vector3(BallCamera.transform.forward.x * 2,0, BallCamera.transform.forward.z * 2);
             lineProjector.SetPositions(linePositions);
 
-            if (RB.velocity.magnitude < minSpeed && HitBall)
-            {
-                RB.velocity = new Vector3(0, 0, 0);
-                HitBall = false;
-                lineProjector.enabled = true;
-            }
+            //if (RB.velocity.magnitude < minSpeed && HitBall)
+            //{
+            //    RB.velocity = new Vector3(0, 0, 0);
+            //    HitBall = false;
+            //    lineProjector.enabled = true;
+            //}
 
             BallCamera.transform.LookAt(gameObject.transform);
         }
