@@ -15,6 +15,7 @@ public class BallController : MonoBehaviour
     public float powerLimit = 0;
     public Gradient Gradient;
     public float minSpeed = 3.0f;
+    public float DistFromBall;
 
     public float PowerMultipiler = 1;
     private float power = 0;
@@ -22,7 +23,7 @@ public class BallController : MonoBehaviour
 
     private Vector3 Xoffset;
     private Vector3 Yoffset;
-
+    private float rotation;
     private Vector3 PrevPos;
 
     private int pinsHit = 0;
@@ -37,7 +38,7 @@ public class BallController : MonoBehaviour
         PowerBar.color = Color.green;
         slider.value = 0;
         ChangeScore(0);
-
+        rotation = BallCamera.transform.localRotation.y;
         PrevPos = new Vector3(0, 0, 0);
     }
 
@@ -58,7 +59,7 @@ public class BallController : MonoBehaviour
         }
 
         //BallCamera.transform.position = gameObject.transform.position + offset;
-        BallCamera.transform.position = gameObject.transform.position + Xoffset + Yoffset;
+        //BallCamera.transform.position = gameObject.transform.position + (Xoffset + Yoffset);
 
         if (Input.GetKey(KeyCode.Mouse0) && RB.velocity.magnitude == 0.0f)
         {
@@ -96,14 +97,17 @@ public class BallController : MonoBehaviour
         else if (Time.timeScale != 0)
         {
 
-            BallCamera.transform.RotateAround(gameObject.transform.position, Vector3.up, Input.GetAxis("Mouse X"));
-            //BallCamera.transform.RotateAround(gameObject.transform.position, gameObject.transform.right, Input.GetAxis("Mouse Y"));
+            BallCamera.transform.Rotate(Vector3.right,Input.GetAxis("Mouse Y"));
+            BallCamera.transform.Rotate(Vector3.up, Input.GetAxis("Mouse X"));
+            BallCamera.transform.position = gameObject.transform.position - BallCamera.transform.forward * DistFromBall;
+            ///BallCamera.transform.RotateAround(gameObject.transform.position, Vector3.up, Input.GetAxis("Mouse X"));
+            //BallCamera.transform.RotateAround(gameObject.transform.position, Vector3.right, Input.GetAxis("Mouse Y"));
 
             //offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X"), -Vector3.up) * offset;
             //offset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y"), -Vector3.forward) * offset;
 
-            Xoffset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * Mousesensitivity, Vector3.up) * Xoffset;
-            Yoffset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y"), Vector3.right) * Yoffset;
+            ///Xoffset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * Mousesensitivity, Vector3.up) * Xoffset;
+            //Yoffset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y"), Vector3.right) * Yoffset;
 
             BallCamera.transform.LookAt(gameObject.transform);
         }
