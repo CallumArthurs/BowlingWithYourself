@@ -32,7 +32,7 @@ public class BallController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
+        Cursor.visible = false;
         Xoffset = new Vector3(BallCamera.transform.position.x - gameObject.transform.position.x, 0, BallCamera.transform.position.z - gameObject.transform.position.z);
         Yoffset = new Vector3(0, BallCamera.transform.position.y - gameObject.transform.position.y, 0);
         //offset = BallCamera.gameObject.transform.position - gameObject.transform.position;
