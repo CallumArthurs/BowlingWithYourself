@@ -59,12 +59,7 @@ public class BallController : MonoBehaviour
             HitBall = false;
         }
 
-        if (RB.velocity.magnitude < minSpeed && HitBall)
-        {
-            RB.velocity = new Vector3(0, 0, 0);
-            HitBall = false;
-            lineProjector.enabled = true;
-        }
+        
 
         //BallCamera.transform.position = gameObject.transform.position + offset;
         //BallCamera.transform.position = gameObject.transform.position + (Xoffset + Yoffset);
@@ -86,7 +81,6 @@ public class BallController : MonoBehaviour
                 slider.value = 1 * ((power % powerLimit) / powerLimit);
             }
 
-            
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0) && RB.velocity.magnitude == 0.0f)
         {
@@ -101,7 +95,7 @@ public class BallController : MonoBehaviour
 
             PowerBar.color = Color.green;
             slider.value = 0;
-            RB.AddForce(BallCamera.transform.forward * (power * PowerMultipiler), ForceMode.Impulse);
+            RB.AddForce(new Vector3(BallCamera.transform.forward.x * 2, 0, BallCamera.transform.forward.z * 2) * (power * PowerMultipiler), ForceMode.Impulse);
             power = 0;
         }
         else if (Time.timeScale != 0)
@@ -122,6 +116,13 @@ public class BallController : MonoBehaviour
             linePositions[0] = gameObject.transform.position;
             linePositions[1] = gameObject.transform.position + new Vector3(BallCamera.transform.forward.x * 2,0, BallCamera.transform.forward.z * 2);
             lineProjector.SetPositions(linePositions);
+
+            if (RB.velocity.magnitude < minSpeed && HitBall)
+            {
+                RB.velocity = new Vector3(0, 0, 0);
+                HitBall = false;
+                lineProjector.enabled = true;
+            }
 
             BallCamera.transform.LookAt(gameObject.transform);
         }
