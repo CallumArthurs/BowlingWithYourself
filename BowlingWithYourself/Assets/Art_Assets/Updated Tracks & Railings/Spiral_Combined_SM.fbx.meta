@@ -9,8 +9,11 @@ ModelImporter:
     400002: //RootNode
     2100000: lambert1
     2100002: lambert4
+    2100004: lambert9
     2300000: Spiral_Combined
+    2300002: //RootNode
     3300000: Spiral_Combined
+    3300002: //RootNode
     4300000: Spiral_Combined
   externalObjects: {}
   materials:
