@@ -15,8 +15,8 @@ public class BallController : MonoBehaviour
     public float powerLimit = 0;
     public Gradient Gradient;
 
-
-    public float power = 0;
+    public float PowerMultipiler = 1;
+    private float power = 0;
     //private Vector3 offset;
 
     private Vector3 Xoffset;
@@ -68,10 +68,10 @@ public class BallController : MonoBehaviour
             }
             PowerBar.color = Color.green;
             slider.value = 0;
-            RB.AddForce(BallCamera.transform.forward * power, ForceMode.Impulse);
+            RB.AddForce(BallCamera.transform.forward * (power * PowerMultipiler), ForceMode.Impulse);
             power = 0;
         }
-        else
+        else if (Time.timeScale != 0)
         {
 
             BallCamera.transform.RotateAround(gameObject.transform.position, Vector3.up, Input.GetAxis("Mouse X"));
@@ -114,5 +114,6 @@ public class BallController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         LevelScores.Scores[LevelSelect.levelNum] = pinsHit;
+        LevelSelect.LoadScene0();
     }
 }
