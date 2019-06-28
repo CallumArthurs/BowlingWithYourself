@@ -12,7 +12,7 @@ public class PinScript : MonoBehaviour
     {
         if (ball == null)
         {
-            GameObject.FindGameObjectWithTag("Ball");
+            ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<BallController>();
         }
     }
 
