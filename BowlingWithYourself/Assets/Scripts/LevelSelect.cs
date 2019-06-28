@@ -41,11 +41,13 @@ public class LevelSelect : MonoBehaviour
 
     public static void LoadScene0()
     {
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
     public void LoadScene0Button()
     {
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
