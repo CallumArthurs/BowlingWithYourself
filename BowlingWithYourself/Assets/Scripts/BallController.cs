@@ -110,4 +110,10 @@ public class BallController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        LevelScores.Scores[LevelSelect.levelNum] = pinsHit;
+        LevelSelect.LoadScene0();
+    }
 }

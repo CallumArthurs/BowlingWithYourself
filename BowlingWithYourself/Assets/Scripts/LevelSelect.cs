@@ -7,6 +7,7 @@ public class LevelSelect : MonoBehaviour
 {
     public GameObject PauseMenu;
 
+    public static int levelNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class LevelSelect : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
+    {
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (Time.timeScale == 1)
@@ -44,14 +45,17 @@ public class LevelSelect : MonoBehaviour
     }
     public void LoadScene1()
     {
-        SceneManager.LoadScene(1);        
+        levelNum = 0;
+        SceneManager.LoadScene(1);
     }
     public void LoadScene2()
     {
+        levelNum = 1;
         SceneManager.LoadScene(2);
     }
     public void LoadScene3()
     {
+        levelNum = 2;
         SceneManager.LoadScene(3);
     }
     public void ResumeGame()

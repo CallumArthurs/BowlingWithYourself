@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class LevelScores : MonoBehaviour
 {
+    public Image[] levelImages;
+
     public Image img_L1;
     public Image img_L2;
     public Image img_L3;
@@ -14,22 +16,50 @@ public class LevelScores : MonoBehaviour
     public Sprite Star2;
     public Sprite Star3;
 
-    public int L1Score;
-    public int L2Score;
-    public int L3Score;
+
+    public static int[] Scores = { 0, 0, 0 };
+    public static int L1Score;
+    public static int L2Score;
+    public static int L3Score;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Level1();
-        Level2();
-        Level3();
+        levelUpdate();
+        //Level1();
+        //Level2();
+        //Level3();
+    }
+
+    private void levelUpdate()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (Scores[i] == 0)
+            {
+                levelImages[i].sprite = Star0;
+            }
+            if (Scores[i] >= 1)
+            {
+                levelImages[i].sprite = Star1;
+            }
+
+            if (Scores[i] >= 6)
+            {
+                levelImages[i].sprite = Star2;
+            }
+
+            if (Scores[i] >= 10)
+            {
+                levelImages[i].sprite = Star3;
+            }
+        }
     }
 
     public void Level1()
