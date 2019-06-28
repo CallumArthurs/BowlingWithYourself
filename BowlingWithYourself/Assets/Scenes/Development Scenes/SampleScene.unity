@@ -868,6 +868,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1610046033746262107, guid: 61f0efd24a6394f41b75c299b11c9d60,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610046033746262110, guid: 61f0efd24a6394f41b75c299b11c9d60,
+        type: 3}
+      propertyPath: PowerMultipiler
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610046033746262110, guid: 61f0efd24a6394f41b75c299b11c9d60,
+        type: 3}
+      propertyPath: DistFromBall
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1610046034036723383, guid: 61f0efd24a6394f41b75c299b11c9d60,
         type: 3}
       propertyPath: m_AnchorMax.x
