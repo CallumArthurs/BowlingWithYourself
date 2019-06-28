@@ -9,9 +9,14 @@ public class BallController : MonoBehaviour
     public Rigidbody RB;
     public GameObject BallCamera;
     public Text PinScoretxt;
+    public Image PowerBar;
+    public Slider slider;
     public float Mousesensitivity;
     public float powerLimit = 0;
-    private float power = 0;
+    public Gradient Gradient;
+
+
+    public float power = 0;
     //private Vector3 offset;
 
     private Vector3 Xoffset;
@@ -26,6 +31,8 @@ public class BallController : MonoBehaviour
         Xoffset = new Vector3(BallCamera.transform.position.x - gameObject.transform.position.x, 0, BallCamera.transform.position.z - gameObject.transform.position.z);
         Yoffset = new Vector3(0, BallCamera.transform.position.y - gameObject.transform.position.y, 0);
         //offset = BallCamera.gameObject.transform.position - gameObject.transform.position;
+        PowerBar.color = Color.green;
+        slider.value = 0;
         ChangeScore(0);
     }
 
@@ -37,6 +44,21 @@ public class BallController : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
         {
             power += -Input.GetAxis("Mouse Y");
+
+            Debug.Log(1 * (power % powerLimit) / powerLimit);
+
+            if (power > powerLimit)
+            {
+                PowerBar.color = Gradient.Evaluate(1);
+                slider.value = 1;
+            }
+            else
+            {
+                PowerBar.color = Gradient.Evaluate(1 * (power % powerLimit) / powerLimit);
+                slider.value = 1 * ((power % powerLimit) / powerLimit);
+            }
+
+
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
@@ -44,6 +66,8 @@ public class BallController : MonoBehaviour
             {
                 power = powerLimit;
             }
+            PowerBar.color = Color.green;
+            slider.value = 0;
             RB.AddForce(BallCamera.transform.forward * power, ForceMode.Impulse);
             power = 0;
         }

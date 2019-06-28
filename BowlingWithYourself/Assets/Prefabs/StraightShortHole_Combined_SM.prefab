@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6984043303239949081}
   - component: {fileID: 6984043303241276217}
   - component: {fileID: 6984043303242373625}
-  - component: {fileID: 225137420846334906}
+  - component: {fileID: 5315470284194162455}
   m_Layer: 0
   m_Name: Straight_Short_Hole_Combined
   m_TagString: Untagged
@@ -79,8 +79,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &225137420846334906
-BoxCollider:
+--- !u!64 &5315470284194162455
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,9 +89,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.049999997, z: 1}
-  m_Center: {x: 0, y: -0.0777, z: 0}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: bf3864e46be40bd4a9b288fda376c493, type: 3}
 --- !u!1 &6984043303240435515
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +116,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6984043303240435515}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
