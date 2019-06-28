@@ -23,11 +23,13 @@ ExportedObj/
 *.svd
 *.pdb
 *.opendb
+*.VC.db
 
 
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
+*.mdb.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
