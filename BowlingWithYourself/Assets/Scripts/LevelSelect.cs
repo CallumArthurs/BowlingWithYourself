@@ -39,7 +39,7 @@ public class LevelSelect : MonoBehaviour
         }
     }
 
-    public void LoadScene0()
+    public static void LoadScene0()
     {
         SceneManager.LoadScene(0);
     }
