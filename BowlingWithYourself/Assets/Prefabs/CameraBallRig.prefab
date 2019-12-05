@@ -507,7 +507,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  minSpeed: 1
+  minSpeed: 3
   DistFromBall: 3
   lineProjector: {fileID: 9023594807708218137}
   PowerMultipiler: 5
